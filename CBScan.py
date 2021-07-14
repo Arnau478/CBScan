@@ -2,20 +2,20 @@
 
 import nmap
 
-print()
+print("\x1b[34m")
 print("   ____   ____    _   _          ")
 print("  / ___| | __ )  (_) | |_   ___  ")
 print(" | |     |  _ \  | | | __| / __| ")
 print(" | |___  | |_) | | | | |_  \__ \ ")
 print("  \____| |____/  |_|  \__| |___/ ")
-print()
+print("\x1b[0m")
 
-print("[Info] Herramienta para escanear los puertos abiertos en una dirección IP")
-print("  ||   Escrito en Python y utiliza Nmap")
-print("  ||   Más Herramientas y Tutoriales en >> youtube.com/c/ContandoBits\n")
+print("\x1b[31m[Info]\x1b[0m Herramienta para escanear los puertos abiertos en una dirección IP")
+print("\x1b[31m  ||  \x1b[0m Escrito en Python y utiliza Nmap")
+print("\x1b[31m  ||  \x1b[0m Más Herramientas y Tutoriales en >> \x1b[34m\x1b[4mhttps://youtube.com/c/ContandoBits\x1b[0m\n")
 
 
-ip=input("[+] IP Objetivo ==> ")
+ip=input("\x1b[36m[\x1b[34m+\x1b[36m]\x1b[0m IP Objetivo ==> ")
 nm = nmap.PortScanner()
 puertos_abiertos="-p "
 results = nm.scan(hosts=ip,arguments="-sT -n -Pn -T4")
